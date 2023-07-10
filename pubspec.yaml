@@ -1,0 +1,29 @@
+name: keyboard_mouse_indicator
+description: A beautiful widget that shows mouse and keyboard events.
+
+repository: https://github.com/BirjuVachhani/keyboard_mouse_indicator
+homepage: https://github.com/BirjuVachhani/mouse_indicator
+screenshots:
+  - description: 'Package Image'
+    path: screenshots/pub_image.png
+
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  equatable: '>=2.0.0 <3.0.0'
+  collection: '>=1.17.0 <2.0.0'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.2
+
+flutter:
+
+scripts: scripts.yaml
