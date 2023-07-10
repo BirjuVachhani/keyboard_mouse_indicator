@@ -1,4 +1,4 @@
-![Keyboard Mouse Indicator](banner.png)
+![Keyboard Mouse Indicator](https://raw.githubusercontent.com/BirjuVachhani/keyboard_mouse_indicator/main/banner.png)
 
 # Keyboard Mouse Indicator
 
