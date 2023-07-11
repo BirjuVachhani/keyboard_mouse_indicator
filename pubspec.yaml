@@ -1,8 +1,8 @@
 name: keyboard_mouse_indicator
-description: A beautiful widget that shows mouse and keyboard events.
+description: A beautiful widget that shows mouse and keyboard events on screen with full customization options.
 
 repository: https://github.com/BirjuVachhani/keyboard_mouse_indicator
-homepage: https://github.com/BirjuVachhani/mouse_indicator
+homepage: https://github.com/BirjuVachhani/keyboard_mouse_indicator
 screenshots:
   - description: 'Package Image'
     path: screenshots/pub_image.png
