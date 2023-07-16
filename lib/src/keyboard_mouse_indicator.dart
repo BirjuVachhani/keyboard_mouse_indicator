@@ -56,7 +56,7 @@ class KeyboardMouseIndicator extends StatelessWidget {
     this.itemSpacing = 4,
     this.alignment = Alignment.centerLeft,
     this.itemBuilder,
-    this.showAsHistory = false,
+    this.showAsHistory = true,
     this.fadeText = true,
     this.showMouseIndicator = true,
     this.keyLabelBuilder,

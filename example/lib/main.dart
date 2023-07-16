@@ -55,16 +55,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Stack(
           children: [
             Positioned(
-              right: 32,
+              left: 32,
               bottom: 32,
               child: KeyboardMouseIndicator(
                 controller: controller,
                 alignment: Alignment.bottomLeft,
-                showAsHistory: true,
                 maxLength: 10,
-                mouseIndicator: const MouseIndicator(
-                  height: 72,
-                ),
+                mouseIndicator: const MouseIndicator(height: 72),
               ),
             ),
             Positioned(
