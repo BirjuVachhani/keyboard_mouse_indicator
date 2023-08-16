@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -150,26 +151,30 @@ class KeyboardMouseIndicator extends StatelessWidget {
 
   /// Returns a prettified string of the given [event].
   String prettify(KeyIndicatorEvent event) {
+    String? mouseButton;
     if (event.mouseButton != null) {
-      return event.mouseButton!.isPrimary
+      mouseButton = event.mouseButton!.isPrimary
           ? 'Left Mouse'
           : event.mouseButton!.isSecondary
               ? 'Right Mouse'
               : 'Middle Mouse';
     }
-    final printableKey = prettifyKey(event.keyboardKey);
-    if (event.modifiersPressed.isEmpty) return printableKey;
-    final modifiers =
-        event.modifiersPressed.map(keyLabelBuilder ?? prettifyKey).join(' + ');
+    final String? printableKey = event.keyboardKey != null
+        ? keyLabelBuilder?.call(event.keyboardKey!) ??
+            prettifyKey(event.keyboardKey)
+        : null;
 
-    if (printableKey.isEmpty) return modifiers;
+    final String? modifiers = event.modifiersPressed.isNotEmpty
+        ? event.modifiersPressed.map(keyLabelBuilder ?? prettifyKey).join(' + ')
+        : null;
 
-    return '$modifiers + $printableKey';
+    return [modifiers, printableKey, mouseButton].whereNotNull().join(' + ');
   }
 
   /// Returns a prettified string of the given [key].
   String prettifyKey(LogicalKeyboardKey? key) {
     if (key == null) return '';
+    if (key == LogicalKeyboardKey.space) return 'SPACE'; // ⌘
     if (isMetaPressed(key)) return 'CMD'; // ⌘
     if (isControlPressed(key)) return 'CTRL';
     if (isShiftPressed(key)) return 'SHIFT'; // ⇧

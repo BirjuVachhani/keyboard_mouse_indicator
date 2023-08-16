@@ -1,3 +1,8 @@
+## 0.1.2 (Unreleased)
+
+- Fix space not printing.
+- Fix keyLabelBuilder not being used for printable keys.
+
 ## 0.1.1
 
 - Fix pubspec description and homepage url.
