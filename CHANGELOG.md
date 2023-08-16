@@ -1,4 +1,4 @@
-## 0.1.2 (Unreleased)
+## 0.1.2
 
 - Fix space not printing.
 - Fix keyLabelBuilder not being used for printable keys.
